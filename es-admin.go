@@ -23,9 +23,9 @@ func main() {
 	flDebug := rootCmd.PersistentFlags().BoolP("debug", "D", false, "Enable debug mode.")
 	flQuiet := rootCmd.PersistentFlags().BoolP("quiet", "q", true, "Disable output column headers.")
 
-	flHost := rootCmd.PersistentFlags().StringP("host", "H", "", "Disable output column headers.")
-	flPort := rootCmd.PersistentFlags().StringP("port", "p", "", "Disable output column headers.")
-	flAuth := rootCmd.PersistentFlags().StringP("auth", "A", "", "Disable output column headers.")
+	flHost := rootCmd.PersistentFlags().StringP("host", "H", "", "ES_HOST to connect to. Default: localhost")
+	flPort := rootCmd.PersistentFlags().StringP("port", "P", "", "ES_PORT to connect on. Defaulf: 9200")
+	flAuth := rootCmd.PersistentFlags().StringP("auth", "A", "", "ES_AUTH username:password for authentication.")
 
 	var healthCmd = &cobra.Command{
 		Use:   "health",
