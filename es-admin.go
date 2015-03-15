@@ -40,7 +40,7 @@ func main() {
 				return
 			}
 
-			fmt.Printf("%+v", resp)
+			PrintHealth(resp)
 		},
 	}
 
